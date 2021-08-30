@@ -1,0 +1,34 @@
+<h1 id="tableLabel">Weather forecast</h1>
+
+<p>This component demonstrates fetching data from the server.</p>
+
+<p *ngIf="!forecasts"><em>Loading...</em></p>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="TeamStats">
+  <thead>
+    <tr>
+      <th>TEAM</th>
+      <th>MP</th>
+      <th>W</th>
+      <th>L</th>
+      <th>D</th>
+      <th>GF</th>
+      <th>GA</th>
+      <th>GD</th>
+      <th>P</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let TeamStats of TeamStats">
+      <td>{{ TeamStats.Team }}</td>
+      <td>{{ TeamStats.MP }}</td>
+      <td>{{ TeamStats.W }}</td>
+      <td>{{ TeamStats.L }}</td>
+      <td>{{ TeamStats.D }}</td>
+      <td>{{ TeamStats.GF }}</td>
+      <td>{{ TeamStats.GA }}</td>
+      <td>{{ TeamStats.GD }}</td>
+      <td>{{ TeamStats.P }}</td>
+    </tr>
+  </tbody>
+</table>
